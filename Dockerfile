@@ -34,6 +34,7 @@ RUN yum install -y glibc.i686 zlib.i686 fontconfig freetype freetype-devel fontc
 RUN mkdir -p /tomcat/webapps/
 RUN mkdir -p /tomcat/logs/
 
+ADD cboard.war  /tomcat/webapps/cboard.war
 COPY entrypoint.sh /
 
 EXPOSE 8080 8009
